@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from galaxyanalytics.net/demos/lakeresort/booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2019 13:29:43 GMT -->
+<!-- Mirrored from galaxyanalytics.net/demos/lakeresort/room2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2019 13:28:14 GMT -->
 
 <head>
   <meta charset="UTF-8">
@@ -38,7 +38,7 @@
   <section id="sidebarCollapse" class="side-menu">
     <button type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-expanded="false"
       aria-controls="sidebarCollapse" class="close-button"><i class="fa fa-times"></i></button>
-    <div class="side-menu-widget about-widget"><a href="." class="logo"><img src="images/icon/lr-home.png"
+    <div class="side-menu-widget about-widget"><a href="index.html" class="logo"><img src="images/icon/lr-home.png"
           alt="Awesome Image"></a>
       <h3 class="title playball-font">Welcome to Resort</h3>
       <!-- /.title playball-font-->
@@ -80,19 +80,20 @@
       </form>
     </div>
   </section>
+  <!-- /.side-menu-->
   <section class="top-bar dhomev">
     <div class="container">
 
       <!-- /.pull-left left-infos-->
       <div class="pull-right right-infos link-list">
         <ul class="list-inline">
-          <li><a href="#">ENG <img width="20" height="20"
+          <li><a href="#">VN <img width="20" height="20"
                 src="http://icons.iconarchive.com/icons/iconscity/flags/256/vietnam-icon.png" /></a>
           </li>
           <!--comment for inline hack
-                -->
+              -->
           <li><a href="#">ENG <img width="20" height="20"
-                src="http://icons.iconarchive.com/icons/iconscity/flags/256/vietnam-icon.png" /></a></li>
+                src="https://cdn1.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_United_Kingdom_-_Circle-512.png" /></a></li>
         </ul>
       </div>
       <!-- /.pull-right right-infos link-list-->
@@ -116,13 +117,13 @@
           <li><a href="room2.html" onclick="localStorage.setItem('nameMenu', 'datphong')">Đặt Phòng/Nguyên Căn</a></li>
           <li><a href="room2.html" onclick="localStorage.setItem('nameMenu', 'daihan')">EXPART SERVICES</a></li>
           <!-- <li><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Gallery <span class="glyphicon glyphicon-chevron-down"></span></a>
-                  <ul class="dropdown-submenu dropdown-menu">
-                    <li><a href="gallery1.html">Gallery Classic</a></li>
-                    <li><a href="gallery2.html">Gallery Grid</a></li>
-                  </ul>
-                </li> -->
+                <ul class="dropdown-submenu dropdown-menu">
+                  <li><a href="gallery1.html">Gallery Classic</a></li>
+                  <li><a href="gallery2.html">Gallery Grid</a></li>
+                </ul>
+              </li> -->
           <!-- <li><a href="our-restaurant.html">Dinning</a></li>
-                <li><a href="offers.html">offers</a></li> -->
+              <li><a href="offers.html">offers</a></li> -->
           <li><a href="news.html">Cẩm Nang Du Lịch</a></li>
           <li><a href="contact.html">Liên Hệ</a></li>
           <!-- <li><a href="#">EN|VN</a></li> -->
@@ -158,207 +159,161 @@
   <!-- Header  Inner style-->
   <section class="row final-inner-header">
     <div class="container">
-      <h2 class="this-title">News</h2>
+      <h2 class="this-title" id="datphong" style="margin-top: 7%"></h2>
     </div>
   </section>
+  <script>
+    var name = localStorage.getItem("nameMenu");
+    if("datphong" == name) document.getElementById("datphong").textContent = "Đặt Phòng/ Nguyên Căn";
+    else if("daihan" == name) document.getElementById("datphong").textContent = "EXPART SERVICES";
+  </script>
+  <!-- Header  Slider style-->
   <section class="row final-breadcrumb">
     <div class="container">
       <ol class="breadcrumb">
         <li><a href="index.html">Home</a></li>
-        <li><a href="booking.html" class="active">Booking</a></li>
+        <li class="active">Rooms & Suits</li>
       </ol>
     </div>
   </section>
   <!-- Header  Slider style-->
-  <!-- Booking style-->
-  <section class="container clearfix common-pad-inner booknow">
-    <div class="sec-header">
-      <h2>Booking</h2>
-      <h3>Pick a room that best suits your taste and budget</h3>
-    </div>
+  <!-- About Resort style-->
+  <section class="container clearfix common-pad-inner about-info-box nasir-room-grid-header">
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
-        <div class="book-left-content input_form">
-          <form id="contactBooking" action="http://galaxyanalytics.net/demos/lakeresort/contact_process.php"
-            method="post">
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <input id="name" type="text" name="name" placeholder="Your name" class="form-control">
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <input id="email" type="email" name="email" placeholder="Your Email" class="form-control">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <input placeholder="Arival Date" name="arival_date" type="text"
-                  class="form-control datepicker-example8">
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <input type="text" placeholder="Departure Date" name="departure_date"
-                  class="form-control datepicker-example8">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <div class="select-box">
-                  <select name="chooseAdults" class="select-menu">
-                    <option value="default">Adults</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
-                <div class="select-box">
-                  <select name="chooseChildren" class="select-menu">
-                    <option value="default">Children</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <textarea id="message" rows="6" name="message" placeholder="Message" class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <button type="submit" class="res-btn">Submit Now</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-sm-4 pull-right">
-        <div class="single-sidebar-widget">
-          <!-- Categories style-->
-          <div class="single-sidebar-widget-outer">
-            <div class="sec-title-cat sec-title">
-              <h2>Tiện Ích</h2>
-            </div>
-            <div class="categories">
-              <ul>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                      Thuê Xe Máy(Tay Ga, Xe Số)
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                      Tour
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                    <label class="form-check-label" for="defaultCheck3">
-                      Xe Hơi 4,7,16 chỗ
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                    <label class="form-check-label" for="defaultCheck4">
-                      Dịch Vụ BBQ
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                    <label class="form-check-label" for="defaultCheck5">
-                      Quà Lưu Niệm
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-                    <label class="form-check-label" for="defaultCheck6">
-                      Giặt Ủi
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
-                    <label class="form-check-label" for="defaultCheck7">
-                      Vé Máy Bay
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
-                    <label class="form-check-label" for="defaultCheck8">
-                      Visa
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
-                    <label class="form-check-label" for="defaultCheck9">
-                      Xe Đưa Đón Sân Bay
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
-                    <label class="form-check-label" for="defaultCheck10">
-                      Địa Điểm ĂN Uống, Tham Quan, Check In
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Categories style-->
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="sec-header3">
+          <h2>Our Rooms and Suits</h2>
+          <h3>Pick a room that best suits your taste and budget</h3>
         </div>
       </div>
     </div>
   </section>
-  <!-- Booking style-->
-  <!-- Welcome banner  style-->
-  <!-- <div class="nasir-subscribe-form-row row">
+  <!-- About Resort style-->
+  <section class="row nasir-room-grid">
     <div class="container">
-      <div class="row this-dashed">
-        <div class="this-texts">
-          <h2>STAY TUNED WITH US</h2>
-          <h3>Get our updated offers, discounts, events and much more!</h3>
+      <div class="row">
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/1.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
         </div>
-        <form action="#" method="post" class="this-form input-group">
-          <input type="email" placeholder="Enter your email address" class="form-control"><span
-            class="input-group-addon">
-            <button type="submit" class="res-btn">subscribe<i class="fa fa-arrow-right"></i></button></span>
-        </form>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/2.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/3.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/1.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/2.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/3.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/1.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/2.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 nroom-grid"><a href="single-room.html" class="room-img"><img
+              src="images/nasiruddin.com/grid-room/3.jpg" alt=""></a>
+          <div class="row this-conts">
+            <div class="media">
+              <div class="media-body this-title">Deluxe Room</div>
+              <div class="media-right">$215<small>Per Night</small></div>
+            </div>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores quis.</p><a href="single-room.html" class="read-more">view room<i
+                class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-  </div> -->
+  </section>
+  <!-- Welcome banner  style-->
+
   <!-- Welcome banner  style-->
   <!-- footer  style-->
   <footer>
     <section class="clearfix footer-wrapper">
       <section class="container clearfix footer-pad">
-        <div class="widget about-us-widget col-md-6 col-sm-6"><a href="."><img src="images/footer/logo.png" alt=""
-              class="img-responsive"></a>
+        <div class="widget about-us-widget col-md-4 col-sm-6"><a href="index.html"><img src="images/footer/logo.png"
+              alt="" class="img-responsive"></a>
           <p>Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
-          </p>
+          </p><a href="aboutus.html">Read More <i class="fa fa-angle-double-right"></i></a>
           <ul class="nav">
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
@@ -367,7 +322,7 @@
             <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
           </ul>
         </div>
-        <!-- <div class="widget widget-links col-md-2 col-sm-6">
+        <div class="widget widget-links col-md-2 col-sm-6">
           <h4 class="widget_title">Explore</h4>
           <div class="widget-contact-list">
             <ul>
@@ -380,21 +335,21 @@
               <li><a href="offers.html">offers</a></li>
             </ul>
           </div>
-        </div> -->
-        <div class="widget widget-links col-md-3 col-sm-6">
+        </div>
+        <div class="widget widget-links col-md-2 col-sm-6">
           <h4 class="widget_title">Quick Links</h4>
           <div class="widget-contact-list">
             <ul>
-              <li><a href=".">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="aboutus.html">About Us</a></li>
               <li><a href="suite-room.html">suits & Rooms</a></li>
               <li><a href="news-left.html">News</a></li>
-              <li><a href="contact.html">Liên Hệ</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
               <li><a href="booking.html">Booking</a></li>
             </ul>
           </div>
         </div>
-        <div class="widget get-in-touch col-md-3 col-sm-6">
+        <div class="widget get-in-touch col-md-4 col-sm-6">
           <h4 class="widget_title">Get In Touch</h4>
           <div class="widget-contact-list">
             <ul>
@@ -420,7 +375,7 @@
           <p>Copyright © Resort and Hotel 2016. All rights reserved. </p>
         </div>
         <div class="pull-right fo-txt">
-          <p>Created by: <a href="http://themeforest.net/user/designarc">MinhTk1</a></p>
+          <p>Created by: <a href="http://themeforest.net/user/designarc">DesignArc</a></p>
         </div>
       </div>
     </section>
@@ -434,15 +389,11 @@
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/zebra_datepicker.js"></script>
-  <script src="js/jquery.form.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/contact.js"></script>
-  <script src="js/email.js"></script>
+  <!-- jQuery ui js-->
   <script src="js/jquery.fancybox.pack.js"></script>
-  <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
   <script src="js/custom.js"></script>
 </body>
 
-<!-- Mirrored from galaxyanalytics.net/demos/lakeresort/booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2019 13:29:44 GMT -->
+<!-- Mirrored from galaxyanalytics.net/demos/lakeresort/room2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2019 13:28:23 GMT -->
 
 </html>

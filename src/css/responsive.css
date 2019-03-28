@@ -673,7 +673,7 @@
         padding-left: 1em;
     }
     .single-room-wrapper .room-slider-wrapper{
-        display: none;
+        /* display: initial; */
     }
     .activities-outer{
         display: block;
