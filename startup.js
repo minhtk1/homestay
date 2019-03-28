@@ -65,8 +65,8 @@ app.get('/single-room.html', function (req, res) {
         res.end(html);
     });
 })
-app.get('/couple-room.html', function (req, res) {
-    fs.readFile(__dirname + "/src/couple-room.html", function (err, html) {
+app.get('/room2.html', function (req, res) {
+    fs.readFile(__dirname + "/src/room2.html", function (err, html) {
         if (err) throw err;
         res.end(html);
     });
